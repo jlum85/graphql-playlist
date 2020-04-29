@@ -61,3 +61,8 @@ http://localhost:4000/graphql
   }
 }
 ```
+
+jlumineau1@gmail
+atlas jlum85
+
+mongodb+srv://jlum85:<password>@jl-graphql-wz2uj.mongodb.net/test?retryWrites=true&w=majority
