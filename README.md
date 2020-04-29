@@ -62,7 +62,24 @@ http://localhost:4000/graphql
 }
 ```
 
-jlumineau1@gmail
-atlas jlum85
+### Mutation
 
-mongodb+srv://jlum85:<password>@jl-graphql-wz2uj.mongodb.net/test?retryWrites=true&w=majority
+```
+mutation{
+  addAuthor(name: "Terry Pratchett", age: 66){
+    name
+    age
+  }
+}
+
+
+mutation{
+  addBook(name: "Name of the Wind", genre: "Fantasy", authorId:"5ea9e304cdfa53b5c5841df3" ){
+    name
+    genre
+  }
+}
+```
+
+jlumineau1@gmail
+atlas db user : jlum85
