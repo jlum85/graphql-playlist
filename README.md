@@ -6,7 +6,7 @@ Node modules are not included in the course files. After download, run npm insta
 
 ## Server
 
-pour lancer le server
+Pour lancer le server
 
 ```bash
 cd server
@@ -15,7 +15,9 @@ npx nodemon app.js
 
 http://localhost:4000/graphql
 
-```
+### Exemple de queries avec graphiQL
+
+```graphql
 {
   book(id: "1") {
     name
@@ -35,7 +37,7 @@ http://localhost:4000/graphql
 }
 ```
 
-````
+```
 {
   book(id: "1") {
     name
@@ -46,4 +48,16 @@ http://localhost:4000/graphql
   }
 }
 ```
-````
+
+```
+/* tous les book avec le nom et l'age de l'auteur
+{
+  books {
+    name
+    author{
+      name
+      age
+    }
+  }
+}
+```
