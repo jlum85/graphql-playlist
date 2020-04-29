@@ -24,3 +24,26 @@ http://localhost:4000/graphql
   }
 }
 ```
+
+```
+{
+  author(id: 1) {
+    name
+    age
+    id
+  }
+}
+```
+
+````
+{
+  book(id: "1") {
+    name
+    genre
+    author{
+      name
+    }
+  }
+}
+```
+````
