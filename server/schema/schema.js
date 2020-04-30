@@ -39,6 +39,7 @@ const BookType = new GraphQLObjectType({
       resolve(parent, args) {
         // on utilise aurthorId de BookType dispo à partir de parent qui donne le BookType courant
         //return _.find(authors, { id: parent.authorId });
+        return Author.findById(parent.authorId);
       },
     },
   }),
@@ -56,6 +57,7 @@ const AuthorType = new GraphQLObjectType({
         // dans books, on cherche ceux dont le champ authorId correspond à l'id de notre auteur
         //return _.filter(books, { authorId: parent.id });
         //return books.filter((item) => item.authorId === parent.id);
+        return Book.find({ authorId: parent.id });
       },
     },
   }),
@@ -69,29 +71,31 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: GraphQLID } }, // pour pouvoir faire une requête du type :  book(id: '1') { name, genre}
       resolve(parent, args) {
         // code to get data from  db
-        return _.find(books, { id: args.id });
-        // const res = books.filter((item) => item.id === args.id)[0];
-        // console.log(res);
-        // return res;
+        //return _.find(books, { id: args.id });
+        // return res = books.filter((item) => item.id === args.id)[0];
+        return Book.findById(args.id);
       },
     },
     author: {
       type: AuthorType,
       args: { id: { type: GraphQLID } },
       resolve(parent, args) {
-        return _.find(authors, { id: args.id });
+        //return _.find(authors, { id: args.id });
+        return Author.findById(args.id);
       },
     },
     books: {
       type: new GraphQLList(BookType),
       resolve(parent, args) {
         //return books;
+        return Book.find({});
       },
     },
     authors: {
       type: new GraphQLList(AuthorType),
       resolve(parent, args) {
         //return authors;
+        return Author.find({});
       },
     },
   },

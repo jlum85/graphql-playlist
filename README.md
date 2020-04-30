@@ -39,10 +39,10 @@ http://localhost:4000/graphql
 
 ```
 {
-  book(id: "1") {
+  book(id: "5ea9e47b35194ab5f222233a") {
     name
     genre
-    author{
+    author {
       name
     }
   }
