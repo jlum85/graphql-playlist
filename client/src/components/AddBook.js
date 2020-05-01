@@ -15,7 +15,6 @@ class AddBook extends Component {
   }
 
   displayAuthors() {
-    console.log(this.props);
     var data = this.props.getAuthorsQuery; // on a bindé les data avec getAuthorsQuery
     if (data.loading) {
       return <option disabled>Loading authors</option>;
@@ -31,8 +30,15 @@ class AddBook extends Component {
   }
   submitForm(e) {
     e.preventDefault();
-    // const [name, genre, authorId] = this.state;
-    // this.props.addBookMutation(this.state.name);
+    console.log(this.state);
+    // use the addBookMutation
+    this.props.addBookMutation({
+      variables: {
+        name: this.state.name,
+        genre: this.state.genre,
+        authorId: this.state.authorId,
+      },
+    });
   }
 
   render() {

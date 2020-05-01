@@ -18,9 +18,10 @@ const getAuthorsQuery = gql`
   }
 `;
 
+// on déclare les variables et leur type  et on met ! pour dire non null
 const addBookMutation = gql`
-  mutation {
-    addBook(name: "", genre: "", authorId: "") {
+  mutation AddBook($name: String!, $genre: String!, $authorId: ID!) {
+    addBook(name: $name, genre: $genre, authorId: $authorId) {
       name
       id
     }
