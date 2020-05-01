@@ -10,7 +10,7 @@ class BookList extends Component {
       return <div>Loading books...</div>;
     } else {
       return data.books.map((book) => {
-        console.log(book);
+        //console.log(book);
         return <li key={book.id}>{book.name}</li>;
       });
     }
