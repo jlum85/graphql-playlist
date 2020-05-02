@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { graphql } from "react-apollo"; // pour binder la requ^te
 import { flowRight as compose } from "lodash"; // quand on a plusieurs queries
 
-import { getAuthorsQuery, addBookMutation } from "../queries/queries";
+import {
+  getAuthorsQuery,
+  addBookMutation,
+  getBooksQuery,
+} from "../queries/queries";
 
 class AddBook extends Component {
   constructor(props) {
@@ -37,6 +41,8 @@ class AddBook extends Component {
         genre,
         authorId,
       },
+      // après la mutation on relance getBooksQuery
+      refetchQueries: [{ query: getBooksQuery }],
     });
   }
 
