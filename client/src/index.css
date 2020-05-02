@@ -70,6 +70,14 @@ form button {
   left: 10px;
 }
 
+.deleteBtn {
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  background: #ad1457;
+  padding: 0 6px;
+}
+
 #book-details {
   position: fixed;
   top: 0;

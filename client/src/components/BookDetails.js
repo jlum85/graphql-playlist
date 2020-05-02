@@ -6,7 +6,7 @@ import { getBookQuery } from "../queries/queries";
 class BookDetails extends Component {
   displayBookdetails() {
     const { book } = this.props.data;
-    console.log(book);
+    // console.log(book);
     if (book) {
       return (
         <div>
