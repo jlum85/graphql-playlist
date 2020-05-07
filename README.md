@@ -1,6 +1,4 @@
-# graphql-playlist
-
-## Démo Gif
+# GraphQl Reading list
 
 ![Gif demo](demo/demo.gif)
 
