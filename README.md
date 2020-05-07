@@ -1,8 +1,8 @@
 # graphql-playlist
 
-All course files for the GraphQL tutorial playlist on The Net Ninja YouTube channel.
+## Démo Gif
 
-https://www.youtube.com/playlist?list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f
+![Gif demo](demo/demo.gif)
 
 ## Server
 
@@ -81,5 +81,6 @@ mutation{
 }
 ```
 
-jlumineau1@gmail
-atlas db user : jlum85
+GraphQL tutorial from The Net Ninja
+
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9iK6Qhn-QLcXCXPQUov1U7f

@@ -39,6 +39,9 @@ class BookList extends Component {
                   // après la mutation on relance getBooksQuery
                   refetchQueries: [{ query: getBooksQuery }],
                 });
+                if (this.state.selected === book.id) {
+                  this.setState({ selected: null });
+                }
               }}
             >
               x
